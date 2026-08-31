@@ -6,11 +6,11 @@ public class utilidades {
     public void imprimir(int[] a,int[] b){
         System.out.println("los datos del conjunto A son:");
         for (int i = 0; i <a.length; i++) {
-            System.out.println(a[i]);
+            System.out.print(" "+a[i]);
         }
         System.out.println("Los datos del conjunto B son:");
         for (int i = 0; i <b.length; i++) {
-            System.out.println(b[i]);
+            System.out.print(" "+b[i]);
         }
     }
     public void diferenciaAB(int []a, int[] b){
@@ -20,7 +20,7 @@ public class utilidades {
         for (int i = 0; i < a.length; i++) {
             rep=0;
             for (int j = 0; j < b.length; j++) {
-                if (a[i]==b[i]) {
+                if (a[i]==b[j]) {
                     rep=rep+1;
                 }
             }
@@ -32,7 +32,7 @@ public class utilidades {
         for (int i = 0; i < a.length; i++) {
             rep=0;
             for (int j = 0; j < b.length; j++) {
-                if (a[i]==b[i]) {
+                if (a[i]==b[j]) {
                     rep=rep+1;
                 }
             }
@@ -45,18 +45,17 @@ public class utilidades {
         }
         System.out.println("los datos de la diferencia A B son");
         for (int i = 0; i < dif.length; i++) {
-            System.out.println(dif[i]);
+            System.out.print(" "+dif[i]);
         }
     }
     public void simetriaAB(int[]a,int[]b){
         int cont=0;
         int simetria=0;
         int rep=0;
-        int bs=0;
         for (int i = 0; i < a.length; i++) {
             rep=0;
             for (int j = 0; j < b.length; j++) {
-                if (a[i]==b[i]) {
+                if (a[i]==b[j]) {
                     rep=rep+1;
                 }
             }
@@ -64,17 +63,17 @@ public class utilidades {
             cont=cont+2;
             }
         }
-        int[] inter=new int[cont];
+        int[] sim=new int[cont];
         for (int i = 0; i < a.length; i++) {
             rep=0;
             for (int j = 0; j < b.length; j++) {
-                if (a[i]==b[i]) {
+                if (a[i]==b[j]) {
                     rep=rep+1;
                 }
             }
             if (rep==0) {
                 if (simetria<cont) {
-                inter[simetria]=a[i];
+                sim[simetria]=a[i];
                 simetria=simetria+1;
                 
                 }
@@ -83,20 +82,20 @@ public class utilidades {
         for (int i = 0; i < b.length; i++) {
             rep=0;
             for (int j = 0; j < a.length; j++) {
-                if (a[i]==b[i]) {
+                if (a[j]==b[i]) {
                     rep=rep+1;
                 }
             }
             if (rep==0) {
                 if (simetria<cont) {
-                inter[simetria]=b[i];
+                sim[simetria]=b[i];
                 simetria=simetria+1;
                 }
             }
         }
-        System.out.println("los datos de la interseccion son: ");
-        for (int i = 0; i < inter.length; i++) {
-            System.out.println(inter[i]);
+        System.out.println("los datos de la simetria son: ");
+        for (int i = 0; i < sim.length; i++) {
+            System.out.print(" "+sim[i]);
         }
     }
     public void duplicado(int[]a,int[]b){
