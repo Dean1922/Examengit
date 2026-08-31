@@ -141,7 +141,7 @@ public class utilidades {
                 }
             }
         }
-        } while (rep==0);
+        } while (rep!=0);
         
         }
 }
