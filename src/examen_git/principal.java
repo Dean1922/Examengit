@@ -6,27 +6,40 @@ public class principal {
     public static void main(String[] args) {  
         Scanner l=new Scanner(System.in);
         utilidades util= new utilidades();
+         int op=0;
         int[]a=new int[5];
         int[]b=new int[5];
-        System.out.println(""" 
+        int r=0;
+        do {
+            System.out.println(""" 
                            MENU PRINCIPAL
-                           1) A DIFERENCIA B
-                           2) A SIMETRIA B
-                           3) SALIR DEL PROGRAMA
+                           1) LLENADO DE CONJUNTOS
+                           2) A DIFERENCIA B
+                           3) A SIMETRIA B
+                           4) SALIR DEL PROGRAMA
                            """);
-        int op=l.nextInt();
+        op=l.nextInt();
         switch(op){
             case 1:
-                util.diferenciaAB(a, b);
+                if (r==0) {
+                    util.duplicado(a, b);
+                    r=r+1;
+                }else{
+                    System.out.println("Ya se han llenado los conjuntos");
+                }
                 break;
             case 2:
-                util.simetriaAB(a, b);
+                util.diferenciaAB(a, b);
                 break;
             case 3:
+                util.simetriaAB(a, b);
+                break;
+            case 4:
                 System.out.println("Adios...");
                 break;
             default:
         }
+        } while (op!=4);
     }
     
     
