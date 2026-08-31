@@ -16,7 +16,8 @@ public class principal {
                            1) LLENADO DE CONJUNTOS
                            2) A DIFERENCIA B
                            3) A SIMETRIA B
-                           4) SALIR DEL PROGRAMA
+                           4) IMPRIMIR    
+                           5) SALIR DEL PROGRAMA
                            """);
         op=l.nextInt();
         switch(op){
@@ -35,11 +36,14 @@ public class principal {
                 util.simetriaAB(a, b);
                 break;
             case 4:
-                System.out.println("Adios...");
+                util.imprimir(a, b);
+                break;
+            case 5:
+                System.out.println("adios");
                 break;
             default:
         }
-        } while (op!=4);
+        } while (op!=5);
     }
     
     
